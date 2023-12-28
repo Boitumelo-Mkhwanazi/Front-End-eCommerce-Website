@@ -159,7 +159,7 @@ body {
     text-align: center;
     padding: 20px 20px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.08);
-    border: 1px solid #fc7979;
+    border: 1px solid #c9c5c5;
     border-radius: 4px;
     margin: 15px 0;
 }
@@ -171,6 +171,7 @@ body {
 
 #feature .fe-box:hover {
     box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    border: 1px solid #fc7979;
 }
 
 #feature .fe-box h6 {
