@@ -217,6 +217,7 @@ body {
 #product1 .pro img {
     width: 100%;
     border-radius: 20px;
+    background-color: #f2f2f4;
 }
 
 #product1 .pro .des {
@@ -351,9 +352,7 @@ body {
         width: 45%;
         margin: 15px 2.5%;
     }
-}
 
-@media (max-width: 450px) {
     #product1 .pro {
         width: 100%;
     }
