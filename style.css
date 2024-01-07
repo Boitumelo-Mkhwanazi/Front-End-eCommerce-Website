@@ -503,6 +503,31 @@ footer .copyright {
     z-index: -10;
 }
 
+/* About Page */
+#page-header .about-header {
+    background-color: #f91111;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img {
+    width: 100%;
+}
+
+#about-head div {
+    padding-left: 40px;
+}
+
 
 
 
@@ -658,6 +683,23 @@ footer .copyright {
 
     #blog .blog-details {
         width: 100%;
+    }
+    
+    /* About Page */
+    #about-head {
+        flex-direction: column;
+    }
+
+    #about-head img {
+        margin-bottom: 20px;
+    }
+
+    #about-head div {
+        padding-left: 0px;
+    }
+
+    #page-header {
+        height: 20vh;
     }
 }
 
