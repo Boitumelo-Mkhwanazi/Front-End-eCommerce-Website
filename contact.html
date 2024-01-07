@@ -34,13 +34,14 @@
     </section>
 
     <section id="form-details">
-        <form action="">
+        <form action="https://api.web3forms.com/submit" method="POST">
             <span>LEAVE A MESSAGE</span>
             <h2>We'd love to hear from you</h2>
-            <input type="text" placeholder="Your Name">
-            <input type="text" placeholder="E-mail">
-            <input type="text" placeholder="Subject">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="hidden" name="access_key" value="a5b5be94-d667-4bca-848d-463d41c0af92">
+            <input type="text" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" placeholder="E-mail" class="contact-inputs" required>
+            <input type="text" placeholder="Subject" class="contact-inputs" required>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" class="contact-inputs" required></textarea>
             <button class="black">Submit</button>
         </form>
 
