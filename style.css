@@ -607,6 +607,7 @@ footer .copyright {
 #cart table img {
     width: 70px;
     height: 70px;
+    background: #b9b9bb;
 }
 
 #cart table td:nth-child(1) {
