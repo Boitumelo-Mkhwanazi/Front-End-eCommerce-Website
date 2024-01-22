@@ -225,12 +225,12 @@ body {
 
 /* HOME PAGE */
 #hero {
-    background-image: url("pictures/home/home-picture-removebg-preview.png");
+    background-image: url("pictures/Catalogue/Cat\ normal015.jpg");
     height: 90vh;
     width: 100%;
     background-size: 30%;
     background-repeat: no-repeat;
-    background-position: top 50% right 20%;
+    background-position: top 0% right 20%;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -257,7 +257,7 @@ body {
     padding: 15px 40px;
     font-weight: 700;
     font-size: 15px;
-    border-radius: 50px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
