@@ -187,82 +187,84 @@ body {
 
 /* HOME PAGE FEATURE PRODUCTS */
 
+
 #product1 {
     text-align: center;
 }
 
-#product1 .pro-container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    flex-wrap: wrap;
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
 }
 
-#product1 .pro {
-    width: 23%;
-    min-width: 250px;
-    padding: 10px 12px;
-    border: 1px solid #c9c5c5;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-    margin: 15px 0;
-    transition: 0.2s ease;
+.product-box {
     position: relative;
+    margin-bottom: 10px;
 }
 
-#product1 .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+.product-box:hover {
+    padding: 0px;
+    border: 1px solid #b9b9bb;
+    transition: 0.4s;
 }
 
-#product1 .pro img {
+.product-img {
     width: 100%;
-    border-radius: 20px;
-    background-color: #f2f2f4;
+    height: 275px;
+    background: #b9b9bb;
 }
 
-#product1 .pro .des {
-    text-align: start;
-    padding: 10px 0;
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-#product1 .pro .des span {
-    color: #606063;
-    font-style: 12px;
-}
-
-#product1 .pro .des h5 {
-    padding-top: 7px;
-    color: #1a1a1a;
-    font-size: 14px;
-}
-
-#product1 .pro .des i {
-    font-size: 12px;
-    color: rgb(243, 181, 25);
-}
-
-#product1 .pro .des h4 {
-    padding-top: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #f91111;
-}
-
-#product1 .pro .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: #f5e9e9;
-    font-weight: 500;
-    color: #f91111;
-    border: 1px solid #f5e9e9;
+.price {
     position: absolute;
-    bottom: 20px;
-    right: 10px;
+    bottom: 0;
+    left: 0;
+    font-weight: 500;
+    text-align: left;
 }
 
+.sold-out {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-weight: 500;
+    text-align: left;
+    background: #f91111;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #f91111;
+    color: whitesmoke;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    background-color: #f91111;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
 
 /* NEWSLETTER */
 #newsletter {
@@ -406,11 +408,27 @@ footer .copyright {
 }
 
 #prodetails .single-pro-image {
-    width: 50%;
+    width: 40%;
     margin-right: 50px;
-    border: 1px solid #c9c5c5;
-    border-radius: 7px;
-    background: #c9c5c5;
+}
+
+.main-img {
+    margin-bottom: 5px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.small-img {
+    height: 180px;
 }
 
 #prodetails .single-pro-details {
@@ -477,7 +495,6 @@ footer .copyright {
     position: relative;
     padding-bottom: 90px;
 }
-
 
 #blog .blog-img {
     width: 50%;
@@ -819,6 +836,54 @@ footer .copyright {
 
     #newsletter .form {
         width: 100%;
+    }
+
+    .shop-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-box {
+        width: 100%;
+    }
+
+    .product-img {
+        height: 150px;
+    }
+
+    .add-cart {
+        height: 30px;
+        width: 30px;
+    }
+
+    .add-cart::before {
+        position: absolute;
+        justify-content: center;
+        bottom: 7px;
+        right: 8px;
+    }
+
+    .product-title {
+        font-size: 0.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .price {
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .sold-out {
+        top: 3px;
+        right: 3px;
+        font-weight: 500;
+        font-size: 10px;
+        background: #f91111;
+        padding: 2px;
+        border-radius: 2px;
     }
 
     #prodetails {
