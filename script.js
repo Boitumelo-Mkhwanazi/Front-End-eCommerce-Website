@@ -15,3 +15,23 @@ if (close) {
         nav.classList.remove('active');
     })
 }
+
+// Sliding Cart 
+
+let cartIcon = document.querySelectorAll("#bag");
+let cart = document.querySelector(".cart");
+let closeCart = document.querySelector("#cart-close");
+
+//cartIcon.onclick = () => {
+//    cart.classList.add("active");
+//}
+
+cartIcon.forEach((bag) => {
+    bag.onclick = () => {
+        cart.classList.add("bag-active");
+    };
+})
+
+closeCart.onclick = () => {
+    cart.classList.remove("bag-active");
+}
