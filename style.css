@@ -228,7 +228,7 @@ body {
     background-image: url("pictures/Catalogue/Cat\ normal015.jpg");
     height: 90vh;
     width: 100%;
-    background-size: 30%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: top 0% right 20%;
     padding: 0 80px;
@@ -932,6 +932,13 @@ footer .copyright {
 }
   
 @media (max-width: 477px) {
+    #hero {
+        height: 70vh;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top 0% right 20%;
+        padding: 0 20px;
+    }
     #feature .fe-box {
         width: 45%;
         margin: 15px 2.5%;
