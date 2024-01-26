@@ -660,6 +660,54 @@ footer .copyright {
     padding-left: 40px;
 }
 
+#faqs{
+    text-align: center;
+}
+
+.faqs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faq {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background: #f91111;
+    cursor: pointer;
+}
+
+.faq h4 {
+    font-size: 1rem;
+    line-height: 2.2;
+    color: white;
+}
+
+.faq-icon {
+    align-self: flex-start;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 5px;
+}
+
+.question-answer {
+    text-align: left;
+}
+
+.faq p {
+    margin-top: 0.8rem;
+    color: white;
+    display: none;
+}
+
+.faq.open p {
+    display: block;
+}
+
+
 /* Contact Page */
 
 #form-details {
@@ -907,6 +955,14 @@ footer .copyright {
         object-fit: cover;
     }
 
+    #faqs h2 {
+        font-size: 1.5rem;
+    }
+
+    #faqs h4 {
+        font-size: 0.75rem;
+    }
+
     /* Contact Page */
     #form-details {
         padding: 40px;
@@ -1104,5 +1160,27 @@ footer .copyright {
 
     #hero button {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .faqs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    #faqs h2 {
+        font-size: 1rem;
+    }
+
+    #faqs p {
+        margin-top: 0;
+    }
+
+    .know-us {
+        font-size: 1.5rem;
     }
 }

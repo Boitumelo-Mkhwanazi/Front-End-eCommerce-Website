@@ -22,10 +22,6 @@ let cartIcon = document.querySelectorAll("#bag");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#cart-close");
 
-//cartIcon.onclick = () => {
-//    cart.classList.add("active");
-//}
-
 cartIcon.forEach((bag) => {
     bag.onclick = () => {
         cart.classList.add("bag-active");
@@ -35,3 +31,23 @@ cartIcon.forEach((bag) => {
 closeCart.onclick = () => {
     cart.classList.remove("bag-active");
 }
+
+// FAQ Toggle Answers
+
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        faq.classList.toggle('open');
+
+        //change icon 
+        const icon = faq.querySelector('.faq-icon i');
+        if (icon.className === 'fa-solid fa-plus') {
+            icon.className = "fa-solid fa-minus";
+        } else {
+            icon.className = "fa-solid fa-plus";
+        }
+    })
+})
+
+
