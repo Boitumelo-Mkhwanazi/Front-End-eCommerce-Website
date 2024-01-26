@@ -119,7 +119,9 @@ body {
     padding: 20px;
     background: white;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
-    transition: 0.3s;
+    transition: 0.3s ease;
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 .cart.bag-active {
@@ -142,10 +144,10 @@ body {
 }
 
 .cart-img {
-    width: 100px;
+    width: 100%;
     height: 100px;
     object-fit: contain;
-    padding: 10px;
+    padding: 5px;
 }
 
 .detail-box {
@@ -701,10 +703,12 @@ footer .copyright {
     margin-top: 0.8rem;
     color: white;
     display: none;
+    transition: 0.3s ease;
 }
 
 .faq.open p {
     display: block;
+    transition: 0.3s ease;
 }
 
 
@@ -1081,10 +1085,21 @@ footer .copyright {
 
     /* Cart Page */
     .cart {
-        
-        width: 85%;
-        min-height: 100vh;
+        width: 95%;
+        height: 100%;
         padding: 10px;
+    }
+
+    .cart-product-title {
+        font-size: 0.75rem;
+    }
+
+    .cart-price {
+        font-weight: 450;
+    }
+
+    .btn-buy {
+        margin-bottom: 20px;
     }
 
     /* Blog Page */
@@ -1123,6 +1138,17 @@ footer .copyright {
 
     #page-header {
         height: 30vh;
+    }
+
+    .faq {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .faq h4 {
+        font-size: 0.8rem;
+        line-height: 1;
     }
 
     /* Contact Page */
@@ -1182,5 +1208,10 @@ footer .copyright {
 
     .know-us {
         font-size: 1.5rem;
+    }
+
+    .faq-icon {
+        font-size: 1rem;
+        margin-top: 2px;
     }
 }
