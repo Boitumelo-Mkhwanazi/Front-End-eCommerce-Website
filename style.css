@@ -121,7 +121,14 @@ body {
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 0.3s ease;
     overflow-y: scroll;
-    overflow-x: scroll;
+}
+
+.cart *::-webkit-scrollbar {
+    width: 1000px;
+}
+
+.cart *::-webkit-scrollbar-track {
+    background: #f91111;
 }
 
 .cart.bag-active {
@@ -186,7 +193,10 @@ body {
     border-top: 1px solid #222;
 }
 
-#bag {cursor: pointer;}
+#bag {
+    cursor: pointer;
+    font-size: 22px;
+}
 
 .total-title {
     font-size: 1rem;
@@ -222,8 +232,6 @@ body {
     font-size: 1.6rem;
     cursor: pointer;
 }
-
-
 
 /* HOME PAGE */
 #hero {
@@ -302,8 +310,6 @@ body {
 }
 
 /* HOME PAGE FEATURE PRODUCTS */
-
-
 #product1 {
     text-align: center;
 }
@@ -711,6 +717,11 @@ footer .copyright {
     transition: 0.3s ease;
 }
 
+.marquee {
+    color: white;
+    padding: 2.5px;
+}
+
 
 /* Contact Page */
 
@@ -875,10 +886,6 @@ footer .copyright {
 #subtotal button {
     background: #f91111;
 }
-
-
-
-
 
 /* MEDIA QUERIES */
 
@@ -1085,9 +1092,9 @@ footer .copyright {
 
     /* Cart Page */
     .cart {
-        width: 95%;
+        width: 80%;
         height: 100%;
-        padding: 10px;
+        padding: 5px;
     }
 
     .cart-product-title {
