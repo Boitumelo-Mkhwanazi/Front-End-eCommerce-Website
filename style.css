@@ -93,13 +93,6 @@ body {
     color: #f91111;
 }
 
-#navbar li a:hover {
-    background: #f91111;
-    color: white;
-    padding: 5px 8px;
-    border-radius: 5px;
-}
-
 #navbar li a.active::after,
 #navbar li a:hover::after
 #bag:hover {
@@ -132,6 +125,27 @@ body {
 
 .count-items {
     right: -5px;
+}
+
+.bag-items .tooltip {
+    position: absolute;
+    bottom: -50px;
+    right: -20px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    background: #f91111;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+    padding: 10px 15px;
+    opacity: 0;
+    transition: opacity 0.9s;
+    pointer-events: none;
+}
+
+.bag-items:hover .tooltip {
+    opacity: 1;
 }
 
 #mobile {
