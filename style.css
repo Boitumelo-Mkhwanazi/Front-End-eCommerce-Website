@@ -167,7 +167,7 @@ body {
     padding: 20px;
     background: white;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
-    transition: 0.3s ease;
+    transition: all 0.3s;
     overflow-y: scroll;
 }
 
@@ -414,7 +414,7 @@ body {
     border-radius: 2px;
 }
 
-.add-cart {
+.cart-add-container {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -422,7 +422,29 @@ body {
     color: whitesmoke;
     padding: 10px;
     cursor: pointer;
+    transition: opacity 0.9s;
+    z-index: 1;
 }
+
+.add-cart-text {
+    position: absolute;
+    right: -30px;
+    bottom: -40px;
+    background: #f91111;
+    color: white;
+    font-size: 15px;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.9s;
+    pointer-events: none;
+}
+
+.cart-add-container:hover .add-cart-text {
+    opacity: 1;
+}
+
 
 #pagination {
     text-align: center;
