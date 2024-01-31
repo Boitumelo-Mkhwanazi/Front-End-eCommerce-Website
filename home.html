@@ -20,7 +20,12 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="bag"><i class="fa-sharp fa-solid fa-bag-shopping"></i></li>
+                <div class="bag-items">
+                    <li id="bag"><i class="fa-sharp fa-solid fa-bag-shopping"></i></li>
+                    <div class="bag-items-count">
+                        5
+                    </div>
+                </div>
                 <i class="fa-solid fa-square-xmark" id="close"></i>
 
                 <div class="cart">
@@ -96,7 +101,12 @@
             </ul>
         </div>
         <div id="mobile">
-            <li id="bag"><i class="fa-sharp fa-solid fa-bag-shopping"></i></li>
+            <div class="bag-items">
+                <li id="bag"><i class="fa-sharp fa-solid fa-bag-shopping bag-item"></i></li>
+                <div class="bag-items-count count-items">
+                    5
+                </div>
+            </div>
             <i id="bar" class="fa-solid fa-bars"></i>
         </div>
     </section>
@@ -104,7 +114,9 @@
     <section id="hero">
         <h2>LAST DAYS</h2>
         <h4>SOU<span class="africa-text">TH AFRICA</span></h4>
-        <button>Shop Now</button>
+        <button onclick="window.location.href='shop.html'">
+            Shop Now
+        </button>
     </section>
 
     <section id="feature" class="section-p1">
