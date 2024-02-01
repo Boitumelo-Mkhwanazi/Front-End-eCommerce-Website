@@ -1309,6 +1309,15 @@ input[type="radio"] {
         height: 30vh;
     }
 
+    .faqs-ul li label {
+        font-size: 12px;
+    }
+
+    .faqs-ul .content p {
+        font-size: 14px;
+    }
+
+    /*
     .faq {
         padding: 0px;
         display: flex;
@@ -1319,6 +1328,7 @@ input[type="radio"] {
         font-size: 0.8rem;
         line-height: 1;
     }
+    */
 
     /* Contact Page */
     #form-details {
