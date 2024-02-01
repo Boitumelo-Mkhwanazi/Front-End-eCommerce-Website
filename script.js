@@ -33,7 +33,7 @@ closeCart.onclick = () => {
 }
 
 // FAQ Toggle Answers
-
+/*
 const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
@@ -49,5 +49,4 @@ faqs.forEach(faq => {
         }
     })
 })
-
-
+*/

@@ -739,9 +739,17 @@ footer .copyright {
     padding-left: 40px;
 }
 
+.marquee {
+    color: white;
+    padding: 2.5px;
+}
+
+
 #faqs{
     text-align: center;
 }
+
+/*
 
 .faqs-container {
     display: grid;
@@ -787,12 +795,66 @@ footer .copyright {
     display: block;
     transition: 0.3s ease;
 }
+*/
 
-.marquee {
-    color: white;
-    padding: 2.5px;
+.faqs-ul {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
 }
 
+.faqs-ul li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.faqs-ul li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #f91111;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.faqs-ul .content {
+    background: #f91111;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.faqs-ul .content p {
+    color: white;
+}
+
+.faqs-ul input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.faqs-ul input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+}
 
 /* Contact Page */
 
