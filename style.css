@@ -383,9 +383,9 @@ body {
 }
 
 .product-box:hover {
-    padding: 0;
     border: 1px solid #e4e4e5;
-    transition: all 0.4s;
+    transform: scale(1.1);
+    transform-origin: center;
 }
 
 .product-img {
