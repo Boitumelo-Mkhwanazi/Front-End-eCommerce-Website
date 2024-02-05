@@ -253,7 +253,7 @@ homeProducts.forEach((homeProduct) => {
     homeProductsHTML += `
         <div class="product-box">
             <img src="${homeProduct.image}" alt="" class="product-img">
-            <h2 class="product-title">R ${homeProduct.name}</h2>
+            <h2 class="product-title">${homeProduct.name}</h2>
             <span class="price">R ${(homeProduct.priceCents / 100).toFixed(2)}</span>
             <div class="cart-add-container">
                 <div class="cart-add">
