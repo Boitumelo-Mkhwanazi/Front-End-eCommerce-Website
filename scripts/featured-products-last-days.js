@@ -9,7 +9,8 @@ featuredProducts.forEach((featuredProduct) => {
             <div class="cart-add-container js-add-to-cart"
             data-product-name="${featuredProduct.name}"
             data-product-image="${featuredProduct.image}"
-            data-product-price="${(featuredProduct.priceCents / 100).toFixed(2)}">
+            data-product-price="${(featuredProduct.priceCents / 100).toFixed(2)}"
+            data-product-id="${featuredProduct.id}">
                 <div class="cart-add">
                     <i class="fa-solid fa-bag-shopping add-cart"></i>
                 </div>
@@ -28,13 +29,28 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         const productName = button.dataset.productName;
         const productPrice= button.dataset.productPrice;
         const productImage = button.dataset.productImage;
+        const productId = button.dataset.productId;
 
-        cartItems.push({
-            productName: productName,
-            productPrice: productPrice,
-            productImage: productImage,
-            quantity: 1
+        let matchingItem;
+
+        cartItems.forEach((item) => {
+            if (productId === item.productId) {
+                matchingItem = item;
+            }
         });
+
+        if (matchingItem) {
+            matchingItem.quantity += 1;
+        } else {
+            cartItems.push({
+                productName: productName,
+                productPrice: productPrice,
+                productImage: productImage,
+                productId: productId,
+                quantity: 1
+            });
+        }
+
         console.log(cartItems);
     });
 });
