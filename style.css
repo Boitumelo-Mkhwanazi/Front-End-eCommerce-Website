@@ -384,8 +384,6 @@ body {
 
 .product-box:hover {
     border: 1px solid #e4e4e5;
-    transform: scale(1.1);
-    transform-origin: center;
 }
 
 .product-img {
