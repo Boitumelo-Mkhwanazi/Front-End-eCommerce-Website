@@ -6,7 +6,10 @@ featuredProducts.forEach((featuredProduct) => {
             <img src="${featuredProduct.image}" alt="" class="product-img">
             <h2 class="product-title">${featuredProduct.name}</h2>
             <span class="price">R ${(featuredProduct.priceCents / 100).toFixed(2)}</span>
-            <div class="cart-add-container">
+            <div class="cart-add-container js-add-to-cart"
+            data-product-name="${featuredProduct.name}"
+            data-product-image="${featuredProduct.image}"
+            data-product-price="${(featuredProduct.priceCents / 100).toFixed(2)}">
                 <div class="cart-add">
                     <i class="fa-solid fa-bag-shopping add-cart"></i>
                 </div>
@@ -18,4 +21,20 @@ featuredProducts.forEach((featuredProduct) => {
     `;
 });
 
-document.querySelector('.js-featured-content').innerHTML = featuredProductsHTMLProductsHTML;
+document.querySelector('.js-featured-content').innerHTML = featuredProductsHTML;
+
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+    button.addEventListener('click', () => {
+        const productName = button.dataset.productName;
+        const productPrice= button.dataset.productPrice;
+        const productImage = button.dataset.productImage;
+
+        cartItems.push({
+            productName: productName,
+            productPrice: productPrice,
+            productImage: productImage,
+            quantity: 1
+        });
+        console.log(cartItems);
+    });
+});

@@ -6,7 +6,10 @@ homeProducts.forEach((homeProduct) => {
             <img src="${homeProduct.image}" alt="" class="product-img">
             <h2 class="product-title">${homeProduct.name}</h2>
             <span class="price">R ${(homeProduct.priceCents / 100).toFixed(2)}</span>
-            <div class="cart-add-container">
+            <div class="cart-add-container js-add-to-cart"
+            data-product-name="${homeProduct.name}"
+            data-product-image="${homeProduct.image}"
+            data-product-price="${(homeProduct.priceCents / 100).toFixed(2)}">
                 <div class="cart-add">
                     <i class="fa-solid fa-bag-shopping add-cart"></i>
                 </div>
@@ -19,3 +22,19 @@ homeProducts.forEach((homeProduct) => {
 });
 
 document.querySelector('.js-home-shop-content').innerHTML = homeProductsHTML;
+
+document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+    button.addEventListener('click', () => {
+        const productName = button.dataset.productName;
+        const productPrice= button.dataset.productPrice;
+        const productImage = button.dataset.productImage;
+
+        cartItems.push({
+            productName: productName,
+            productPrice: productPrice,
+            productImage: productImage,
+            quantity: 1
+        });
+        console.log(cartItems);
+    });
+});
