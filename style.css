@@ -53,6 +53,75 @@ body {
     width: 100%;
 }
 
+/* Login Page */
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.login-form {
+    padding: 0.5rem 0;
+    max-width: 50rem;
+    margin: 1rem auto;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h1 {
+    margin-bottom: 1rem;
+}
+
+.login-form p {
+    margin-bottom: 2rem;
+}
+
+.login-form label {
+    margin-bottom: 1rem;
+}
+
+.login-form form input {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0.5rem 0;
+    text-indent: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.login-form input::placeholder {
+    font-size: 1rem;
+    color: gray;
+}
+
+.login-form .buttons {
+    margin-top: 1rem;
+}
+
+.login-form label::after {
+    display: none;
+}
+
+.login-form form button {
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+    margin-right: 1.6rem;
+    background-color: #f91111;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form form p a {
+    color: #f91111;
+    font-weight: 600;
+}
 
 /* HEADER */
 
@@ -106,15 +175,20 @@ body {
     left: 20px;
 }
 
-.bag-items {
+.bag-items,
+.user {
     position: relative;
     z-index: 0;
+}
+
+.user-account {
+    font-size: 21px;
 }
 
 .bag-items-count {
     position: absolute;
     top: -5px;
-    right: 13px;
+    right: 11px;
     background: #f91111;
     color: white;
     border-radius: 10px;
@@ -128,7 +202,8 @@ body {
     right: -5px;
 }
 
-.bag-items .tooltip {
+.bag-items .tooltip,
+.user .tooltip {
     position: absolute;
     bottom: -50px;
     right: -20px;
@@ -145,7 +220,12 @@ body {
     pointer-events: none;
 }
 
-.bag-items:hover .tooltip {
+.user .tooltip {
+    padding: 6px 11px;
+}
+
+.bag-items:hover .tooltip,
+.user:hover .tooltip {
     opacity: 1;
 }
 
@@ -1164,6 +1244,22 @@ input[type="radio"] {
 
     .africa-text {
         color: #f91111;
+    }
+
+    .login-form {
+        padding: 5px -2px;
+        margin: 0;
+    }
+
+    .login-form .buttons {
+       display: flex;
+
+    }
+
+    .login-form form button {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+        margin-right: 1rem;
     }
     
     #feature .fe-box {
